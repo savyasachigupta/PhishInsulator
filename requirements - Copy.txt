@@ -1,0 +1,51 @@
+# PhishInsulator AI - Python Dependencies
+
+# Core ML/AI Libraries
+torch>=1.9.0
+transformers>=4.20.0
+scikit-learn>=1.1.0
+numpy>=1.21.0
+pandas>=1.4.0
+
+# Natural Language Processing
+langdetect>=1.0.9
+nltk>=3.7
+spacy>=3.4.0
+
+# Web Framework
+Flask>=2.2.0
+Flask-CORS>=3.0.10
+requests>=2.27.0
+
+# Async/Concurrency
+
+# Data Processing
+unicodedata2>=14.0.0
+regex>=2022.3.0
+
+# URL/Domain Analysis
+python-whois>=0.8.0
+tldextract>=3.4.0
+validators>=0.20.0
+
+# Performance & Monitoring
+psutil>=5.9.0
+memory-profiler>=0.60.0
+
+# Security
+cryptography>=37.0.0
+bcrypt>=3.2.0
+
+# Development & Testing
+pytest>=7.1.0
+pytest-cov>=3.0.0
+black>=22.3.0
+flake8>=4.0.0
+
+# Deployment
+gunicorn>=20.1.0
+docker>=5.0.0
+
+# Optional: GPU Support (uncomment if using CUDA)
+# torch-audio>=0.9.0+cu117
+# torchvision>=0.10.0+cu117

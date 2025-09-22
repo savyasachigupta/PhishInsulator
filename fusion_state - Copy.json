@@ -1,0 +1,67 @@
+{
+  "adaptive_weights": {
+    "url_analysis": 0.3,
+    "text_content": 0.4,
+    "metadata_analysis": 0.2,
+    "behavioral_analysis": 0.1
+  },
+  "performance_history": [
+    {
+      "timestamp": "2025-09-22T17:15:22.776159",
+      "final_score": 0.14285714285714285,
+      "risk_level": "MINIMAL",
+      "node_count": 3,
+      "agreement_level": 0.6600653657604809,
+      "certainty_level": 0.5333333333333333
+    },
+    {
+      "timestamp": "2025-09-22T17:16:02.760116",
+      "final_score": 0.14285714285714285,
+      "risk_level": "MINIMAL",
+      "node_count": 3,
+      "agreement_level": 0.6600653657604809,
+      "certainty_level": 0.5333333333333333
+    },
+    {
+      "timestamp": "2025-09-22T17:51:33.057467",
+      "final_score": 0.17061224489795918,
+      "risk_level": "MINIMAL",
+      "node_count": 3,
+      "agreement_level": 0.7043137042615462,
+      "certainty_level": 0.5009523809523809
+    },
+    {
+      "timestamp": "2025-09-22T17:51:45.183838",
+      "final_score": 0.15918367346938775,
+      "risk_level": "MINIMAL",
+      "node_count": 3,
+      "agreement_level": 0.6861474846993508,
+      "certainty_level": 0.5142857142857143
+    },
+    {
+      "timestamp": "2025-09-22T17:51:59.369654",
+      "final_score": 0.14285714285714285,
+      "risk_level": "MINIMAL",
+      "node_count": 3,
+      "agreement_level": 0.6600653657604809,
+      "certainty_level": 0.5333333333333333
+    },
+    {
+      "timestamp": "2025-09-22T17:52:29.722212",
+      "final_score": 0.14285714285714285,
+      "risk_level": "MINIMAL",
+      "node_count": 3,
+      "agreement_level": 0.6600653657604809,
+      "certainty_level": 0.5333333333333333
+    },
+    {
+      "timestamp": "2025-09-22T17:52:36.742138",
+      "final_score": 0.14285714285714285,
+      "risk_level": "MINIMAL",
+      "node_count": 3,
+      "agreement_level": 0.6600653657604809,
+      "certainty_level": 0.5333333333333333
+    }
+  ],
+  "feedback_data": []
+}

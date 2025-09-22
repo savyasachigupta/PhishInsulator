@@ -1,0 +1,118 @@
+# PhishInsulator AI Configuration
+
+api:
+  host: "0.0.0.0"
+  port: 5000
+  debug: false
+  cors_enabled: true
+  max_content_length: 10000
+  timeout_seconds: 30
+  rate_limit:
+    requests_per_minute: 100
+    burst_limit: 20
+
+models:
+  url_analysis:
+    model_type: "RandomForestClassifier"
+    n_estimators: 100
+    random_state: 42
+    model_path: "models/url_classifier.joblib"
+  
+  text_analysis:
+    model_name: "bert-base-multilingual-cased"
+    max_length: 512
+    model_path: "models/text_classifier.pt"
+    sentiment_model: "nlptown/bert-base-multilingual-uncased-sentiment"
+  
+  metadata_analysis:
+    model_type: "SVM"
+    kernel: "rbf"
+    model_path: "models/metadata_classifier.joblib"
+  
+  behavioral_analysis:
+    model_type: "LSTM"
+    hidden_size: 128
+    num_layers: 2
+    model_path: "models/behavioral_classifier.pt"
+
+fusion:
+  default_method: "weighted_average"
+  node_weights:
+    url_analysis: 0.30
+    text_content: 0.40
+    metadata_analysis: 0.20
+    behavioral_analysis: 0.10
+  
+  risk_thresholds:
+    low: 0.3
+    medium: 0.6
+    high: 0.8
+    critical: 0.9
+  
+  adaptive_learning: true
+  performance_tracking: true
+
+languages:
+  supported:
+    - en  # English
+    - hi  # Hindi
+    - ar  # Arabic
+    - es  # Spanish
+    - fr  # French
+    - de  # German
+    - pt  # Portuguese
+    - ru  # Russian
+  
+  default: "en"
+  auto_detect: true
+
+database:
+  # For production deployment
+  type: "postgresql"
+  host: "localhost"
+  port: 5432
+  name: "phishInsulator"
+  user: "phishInsulator_user"
+  password: "${DB_PASSWORD}"
+  
+  # Alternative: SQLite for development
+  sqlite_path: "data/phishInsulator.db"
+
+security:
+  api_key_required: false
+  jwt_secret: "${JWT_SECRET}"
+  encryption_key: "${ENCRYPTION_KEY}"
+  rate_limiting: true
+  cors_origins:
+    - "http://localhost:3000"
+    - "https://phishInsulator-demo.com"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/phishInsulator.log"
+  max_size_mb: 100
+  backup_count: 5
+
+performance:
+  thread_pool_size: 4
+  max_batch_size: 50
+  cache_size: 1000
+  model_cache_size: 100
+
+monitoring:
+  metrics_enabled: true
+  health_check_interval: 60
+  performance_tracking: true
+  alert_thresholds:
+    error_rate: 0.05
+    response_time_seconds: 5.0
+    memory_usage_percent: 80
+
+deployment:
+  environment: "production"  # development, staging, production
+  scaling:
+    min_replicas: 1
+    max_replicas: 10
+    cpu_threshold: 70
+    memory_threshold: 80
